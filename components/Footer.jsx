@@ -31,7 +31,7 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="relative bg-[#030303] pt-24 pb-8 overflow-hidden">
+        <footer className="relative bg-[#030303] pt-12 md:pt-24 pb-8 overflow-hidden">
             {/* Background effects */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute bottom-0 left-1/4 w-[600px] h-[400px] bg-gradient-to-r from-[var(--magenta-500)]/5 via-[var(--coral-500)]/5 to-[var(--orange-500)]/5 blur-[150px] rounded-full" />

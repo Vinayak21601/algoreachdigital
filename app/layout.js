@@ -1,5 +1,6 @@
 import { Outfit, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ContactModalProvider } from "@/components/ContactModal";
 
 const outfit = Outfit({
   variable: "--font-sans",
@@ -23,7 +24,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${outfit.variable} ${geistMono.variable} antialiased font-sans`}
       >
-        {children}
+        <ContactModalProvider>
+          {children}
+        </ContactModalProvider>
       </body>
     </html>
   );

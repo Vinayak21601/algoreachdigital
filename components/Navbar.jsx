@@ -223,22 +223,51 @@ export default function Navbar() {
                 <AnimatePresence>
                     {mobileOpen && (
                         <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            className="mt-2 w-full bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden p-6 md:hidden"
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            className="mt-2 w-full bg-[#0a0a0a] rounded-2xl shadow-2xl border border-white/10 overflow-hidden md:hidden"
                         >
-                            <div className="flex flex-col gap-4">
-                                <Link href="#about" onClick={() => setMobileOpen(false)} className="text-lg font-semibold text-gray-900 hover:text-[var(--coral-500)]">
-                                    Who We Are
+                            <div className="flex flex-col p-6">
+                                <Link
+                                    href="/"
+                                    onClick={() => setMobileOpen(false)}
+                                    className="py-4 text-lg font-semibold text-white hover:text-[var(--coral-500)] border-b border-white/10 transition-colors"
+                                >
+                                    Home
                                 </Link>
-                                <Link href="#work" onClick={() => setMobileOpen(false)} className="text-lg font-semibold text-gray-900 hover:text-[var(--coral-500)]">
+                                <Link
+                                    href="/#services"
+                                    onClick={() => setMobileOpen(false)}
+                                    className="py-4 text-lg font-semibold text-white hover:text-[var(--coral-500)] border-b border-white/10 transition-colors"
+                                >
+                                    Services
+                                </Link>
+                                <Link
+                                    href="/#work"
+                                    onClick={() => setMobileOpen(false)}
+                                    className="py-4 text-lg font-semibold text-white hover:text-[var(--coral-500)] border-b border-white/10 transition-colors"
+                                >
                                     Our Work
                                 </Link>
-                                <Link href="#resources" onClick={() => setMobileOpen(false)} className="text-lg font-semibold text-gray-900 hover:text-[var(--coral-500)]">
-                                    Resources
+                                <Link
+                                    href="/blog"
+                                    onClick={() => setMobileOpen(false)}
+                                    className="py-4 text-lg font-semibold text-white hover:text-[var(--coral-500)] border-b border-white/10 transition-colors"
+                                >
+                                    Blog
                                 </Link>
-                                <button className="mt-4 w-full bg-gradient-to-r from-[var(--orange-500)] via-[var(--coral-500)] to-[var(--magenta-500)] text-white py-3 rounded-full font-semibold">
+                                <Link
+                                    href="/#about"
+                                    onClick={() => setMobileOpen(false)}
+                                    className="py-4 text-lg font-semibold text-white hover:text-[var(--coral-500)] border-b border-white/10 transition-colors"
+                                >
+                                    About Us
+                                </Link>
+                                <button
+                                    onClick={() => setMobileOpen(false)}
+                                    className="mt-6 w-full bg-gradient-to-r from-[var(--orange-500)] via-[var(--coral-500)] to-[var(--magenta-500)] text-white py-4 rounded-full font-semibold text-lg shadow-lg"
+                                >
                                     Let's Talk
                                 </button>
                             </div>

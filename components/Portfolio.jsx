@@ -58,7 +58,7 @@ const projects = [
 
 export default function Portfolio() {
     return (
-        <section className="relative py-32 bg-[#050505] text-white overflow-hidden" id="work">
+        <section className="relative py-16 md:py-32 bg-[#050505] text-white overflow-hidden" id="work">
             {/* Premium background effects */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-[var(--coral-500)]/5 blur-[150px] rounded-full" />
@@ -74,7 +74,7 @@ export default function Portfolio() {
                     className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8"
                 >
                     <div>
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-6">
+                        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-6">
                             <Sparkles size={14} className="text-[var(--orange-500)]" />
                             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">
                                 Selected Work
@@ -91,7 +91,7 @@ export default function Portfolio() {
                         </p>
                     </div>
                     <div className="hidden md:block">
-                        <Button variant="glass" size="md" icon={<ArrowUpRight size={18} />}>
+                        <Button variant="glass" size="md" className="px-5 py-2.5" icon={<ArrowUpRight size={18} />}>
                             View All Projects
                         </Button>
                     </div>
@@ -127,7 +127,7 @@ export default function Portfolio() {
                                 <div className="absolute inset-0 p-8 flex flex-col justify-between">
                                     {/* Top - Category tag */}
                                     <div className="flex justify-between items-start">
-                                        <span className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r ${project.gradient} text-white shadow-lg`}>
+                                        <span className={`px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r ${project.gradient} text-white shadow-lg`}>
                                             {project.category}
                                         </span>
                                         <span className="text-white/40 font-mono text-sm">
@@ -162,7 +162,7 @@ export default function Portfolio() {
 
                 {/* Mobile CTA */}
                 <div className="mt-12 md:hidden">
-                    <Button variant="gradient" size="lg" className="w-full" icon={<ArrowUpRight size={18} />}>
+                    <Button variant="gradient" size="lg" className="w-full px-7 py-3.5" icon={<ArrowUpRight size={18} />}>
                         View All Projects
                     </Button>
                 </div>
