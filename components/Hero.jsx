@@ -112,12 +112,12 @@ export default function Hero() {
                         START PROJECT
                     </Button>
 
-                    <button className="group flex items-center gap-4 text-xs font-bold tracking-widest text-white/40 hover:text-white transition-all">
+                    {/* <button className="group flex items-center gap-4 text-xs font-bold tracking-widest text-white/40 hover:text-white transition-all">
                         <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-white/5 group-hover:border-orange-500/50 group-hover:bg-white/10 transition-all">
                             <Play size={14} fill="white" />
                         </div>
                         WATCH REEL
-                    </button>
+                    </button> */}
                 </motion.div>
             </div>
         </section>
